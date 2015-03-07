@@ -1,0 +1,2 @@
+serviceClass: com.capitalone.share360.client.GreetingService
+path: B3D86C400CDD743597745E2CBB6B18A4.gwt.rpc
