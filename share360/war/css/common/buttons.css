@@ -1,0 +1,327 @@
+/* ==|== General button ======================================================= */
+.action_button {
+	font-family: Avenir, Arial;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+	line-height: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* ==|== Gray button ======================================================= */
+.button_gray {
+	box-shadow: 0px 0px 4px #ccc;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #d9d9d9) );
+	background: -moz-linear-gradient( center top, #f5f5f5 5%, #d9d9d9 100% );
+	background-color: #e7e7e7;
+	border: 1px solid #c2c2c2;
+	color: #242424;
+	text-shadow: 1px 1px 0px #ffffff;
+}
+.button_gray:active {
+	background: none;
+	background-color: #b1b1b1;
+	color: #6b6b6b;
+}
+
+/* ==|== Green button ======================================================= */
+.button_green {
+	box-shadow: 0px 0px 4px #ccc;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3ac63a), color-stop(1,#009900) );
+	background: -moz-linear-gradient( center top, #3ac63a 5%, #009900 100% );
+	background-color: #009900;
+	border: 1px solid #03a336;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px #2a953f;
+}
+.button_green:active {
+	background: none;
+	background-color: #138d13;
+	color: #155515;
+}
+
+/* ==|== Light Green button ======================================================= */
+.button_lightGreen {
+	box-shadow: 0px 0px 4px #d2dcbd;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #99c941), color-stop(1,#6da00c) );
+	background: -moz-linear-gradient( center top, #99c941 5%, #6da00c 100% );
+	background-color: #84b628;
+	border: 1px solid #88b72b;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px #93bb46;
+}
+.button_lightGreen:active {
+	background: none;
+	background-color: #5a8409;
+	color: #202f00;
+}
+
+/* ==|== Purple button ======================================================= */
+.button_nonclick {
+	box-shadow: inset 0px 1px 0px 0px #ccc !important;
+	background-color: #ccc !important;
+	border: 1px solid #ccc !important;
+	color: #808080 !important;
+	text-shadow: 1px 1px 0px #ccc !important;
+	background-image: linear-gradient(to bottom, #ccc 0%, #ccc 100%) !important;
+	outline: none;
+	cursor: default !important;
+}
+.button_nonclick:active {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ccc), color-stop(1, #ccc) );
+	background: -moz-linear-gradient( center top, #ccc 5%, #ccc 100% );
+}
+
+.button_red {
+	box-shadow: inset 0px 1px 0px 0px #E81538 !important;
+	background-color: #E81538 !important;
+	border: 1px solid #E81538 !important;
+	color: #fff !important;
+	text-shadow: 1px 1px 0px #E81538 !important;
+	background-image: linear-gradient(to bottom, #E81538 0%, #E81538 100%) !important;
+	outline: none;
+	cursor: default !important;
+}
+.button_red:active {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #E81538), color-stop(1, #E81538) );
+	background: -moz-linear-gradient( center top, #E81538 5%, #E81538 100% );
+}
+
+
+.button_purple {
+	box-shadow: inset 0px 1px 0px 0px #0d901a;
+	background-color: #0d901a;
+	border: 1px solid #0d901a;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px #0d901a;
+	background-image: linear-gradient(to bottom, #0d901a 0%, #006f0b 100%);
+	outline: none;
+}
+.button_purple:active {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006f0b), color-stop(1, #0d901a) );
+	background: -moz-linear-gradient( center top, #006f0b 5%, #0d901a 100% );
+}
+
+/* ==|== Red button ======================================================= */
+.button_red {
+	box-shadow: 0px 0px 4px #d88f8f;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ea0000), color-stop(1, #c50a0a) );
+	background: -moz-linear-gradient( center top, #ea0000 5%, #c50a0a 100% );
+	background-color: #d40101;
+	border: 1px solid #bd0000;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px #dd5858;
+}
+.button_red:active {
+	background: none;
+	background-color: #bd0000;
+	color: #7b0101;
+}
+
+/* ==|== Black button ======================================================= */
+.button_black {
+	box-shadow: none;
+	background-color: #1e1e1e;
+	border: 1px solid #3e3e3e;
+	color: #bcbcbc;	
+	text-shadow: none;
+}
+.button_black:active {
+	background-color: #535353;
+	color: #252525;
+}
+
+/* ==|== Dark Gray button (Disabled) ======================================================= */
+.button_disabled {
+	box-shadow: 0px 0px 4px #ccc;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #BCBCBC), color-stop(1, #ABABAB) );
+	background: -moz-linear-gradient( center top, #BCBCBC 5%, #ABABAB 100% );
+	background-color: #BCBCBC;
+	border: 1px solid #595959;
+	color: #595959;
+	text-shadow: 1px 1px 0px #ffffff;
+}
+.button_disabled:active {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ABABAB), color-stop(1, #BCBCBC) );
+	background: -moz-linear-gradient( center top, #ABABAB 5%, #BCBCBC 100% );
+}
+
+/* ==|== Stock symbol button ======================================================= */
+.button_symbol {
+	font-family: Avenir, Arial;
+	display: inline-block;
+	text-decoration: none;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #d9d9d9) );
+	background: -moz-linear-gradient( center top, #f5f5f5 5%, #d9d9d9 100% );
+	font-size: 15px;
+	font-weight: bold;
+	color: #003399;
+	width: 68px;
+	padding: 6px 0;
+	border-radius: 50px;
+	border: 1px solid #D5D5D5;	
+	text-align: center;
+	cursor: pointer;	
+}
+.button_small_font {
+	font-size:12px;
+}
+.button_symbol:active {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dadada), color-stop(1, #c7c5c5) );
+	background: -moz-linear-gradient( center top, #dadada 5%, #c7c5c5 100% );
+	color: #6d6c6c;
+}
+
+/* ==|== Stock Option symbol button ======================================================= */
+.button_symbol_option {
+	font-family: Avenir, Arial;
+	display: inline-block;
+	text-decoration: none;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #d9d9d9) );
+	background: -moz-linear-gradient( center top, #f5f5f5 5%, #d9d9d9 100% );
+	font-size: 10px;
+	font-weight: bold;
+	color: #003399;
+	width: 70px;
+	height: 36px;
+	padding: 3px 0 9px 0;
+	border-radius: 3px;
+	border: 1px solid #D5D5D5;	
+	text-align: center;
+	cursor: pointer;
+}
+.button_symbol_option:active {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dadada), color-stop(1, #c7c5c5) );
+	background: -moz-linear-gradient( center top, #dadada 5%, #c7c5c5 100% );
+	color: #6d6c6c;
+}
+.button_symbol_option > .symbol {
+	font-size: 13px;
+	margin-top: 2px;
+	margin-bottom: 4px;
+}
+.button_symbol_option > .date {
+	margin-bottom: 2px;
+}
+
+/* ==|== On/Off switch button ======================================================= */
+.toggle-switch {
+    width: 73px;
+    height: 28px;
+    padding: 3px;
+    overflow: hidden;
+    -webkit-transform: translateZ(0); /* eliminates flickering */
+}
+.toggle-switch .bg {
+	width: 73px; 
+	height: 28px;
+	margin-bottom: -27px;
+	border-radius: 14px;		
+	background-image: -webkit-gradient(linear,0 0, 100% 0, from(#008700), color-stop(50%, #008700), color-stop(51%, #d12b1a), to(#d12b1a));
+	background-image: -moz-linear-gradient(0deg, #008700 0, #008700 50%, #d12b1a 51%, #d12b1a 100%);
+	background-image: -linear-gradient(#008700, #008700 50%, #d12b1a 51%, #d12b1a);	
+	background-size: 200%;	
+	-webkit-transition: background-position 0.16s linear;
+	-moz-transition: background-position 0.2s linear;
+	transition: background-position 0.2s linear;	
+	background-position: 85%;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.7), inset 0 14px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.7), inset 0 14px 0 rgba(0,0,0,0.1);	
+	box-shadow: inset 0 0 4px rgba(0,0,0,0.7), inset 0 14px 0 rgba(0,0,0,0.1);
+}
+.toggle-switch label { 
+	display: block; 
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: box;			
+	position: relative; 
+	width: 78px; 
+	height: 28px; 
+	-webkit-box-align: center; 
+	-moz-box-align: center; 
+	box-align: center;			
+	-webkit-box-orient: horizontal; 
+	-moz-box-orient: horizontal; 
+	box-orient: horizontal;			
+	-webkit-transform: translateX(-47px); 
+	-moz-transform: translateX(-47px); 
+	transform: translateX(-50%);		
+	-webkit-transition: -webkit-transform 0.19s linear; 
+	-moz-transition: -moz-transform 0.2s linear; 
+	transition: transform 0.2s linear;
+	cursor: pointer;
+}
+.toggle-switch input:checked ~ .bg { 
+	background-position-x: 20%; 
+	background-position: 20% 50%; 
+}	
+.toggle-switch input:checked ~ label { 
+	-webkit-transform: translateX(0); 
+	-moz-transform: translateX(0); 
+	transform: translateX(0);
+}
+.toggle-switch input:checked ~ label span:last-child {
+	opacity: 0; 
+	-webkit-transition-delay: 0s; 
+	-moz-transition-delay :0s; 
+	transition-delay: 0s; 
+}
+.toggle-switch input { 
+	display: none;
+}
+.toggle-switch label span {
+	display: block; 
+	width: 50%; 
+	padding: 0 15px; 
+	font-size: 14px; 
+	font-weight: bold; 
+	line-height: 26px;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+.toggle-switch label span:first-child { 
+	position: relative; 
+	color: #fff; 
+	padding-right: 9px; 
+	width: 46px; 
+}
+.toggle-switch label span:last-child {
+	padding-left: 33px;
+	padding-right: 0;
+	color: #fff;
+	opacity: 1;
+	-webkit-transition: -webkit-opacity 0.2s 0.1s linear; 
+	-moz-transition: -moz-opacity 0.2s linear; 
+	transition: opacity 0.2s 0.1s linear;
+}
+.toggle-switch label span:first-child::after {
+	position: absolute;
+	right: -28px;
+	top: -2px;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #666;
+	border-radius: 14px;
+	background-color: #ccc;
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+	content:"";
+	box-shadow: 0 0 2px rgba(0,0,0,0.7), inset 0 0 3px 1px rgba(255,255,255,1);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bbb), to(#fefefe));
+	background-image: -moz-linear-gradient(#bbb, #fefefe);
+	background-image: linear-gradient(#bbb, #fefefe);
+}
+.bond_symbol {
+	font-family: Avenir, Arial;
+	font-size: 12px;
+	font-weight: bold;
+	color: #039;
+	padding-left:2px;
+	
+}

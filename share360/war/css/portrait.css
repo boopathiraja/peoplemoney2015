@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header-wrap {
+	width: 768px;		
+	left: 120px;
+	width: 1024px;	
+}
+#container {
+	width: 768px;
+	margin: 0 auto;
+}

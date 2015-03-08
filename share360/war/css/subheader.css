@@ -1,0 +1,105 @@
+.subheader {
+  position: relative;
+  height: 42px;
+  line-height: 42px;
+  background-position: 0px -80px;
+  background-image: url(../images/repeat-x-sprite.png);
+  background-repeat: repeat-x;
+  z-index: 1;
+  padding: 0px 15px 0px 0px;
+}
+.subheader .title {
+  color: #000;
+  float: left;
+  font-family: ETFAvenirHeavy;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 0px 0 0 12px;
+  text-align: left;
+  margin: 0;
+}
+
+.subheader .back-button {
+	background-image: url("../images/main-sprite.png");
+	background-repeat: no-repeat;
+	background-position: -512px -261px;
+	cursor: pointer;
+	float: left;
+  height: 33px;
+  margin-left: 12px;
+  position: relative;
+  top: 6px;
+  width: 75px;
+}
+
+.subheader .refresh-button {
+  display: inline-block;
+  height: 30px;
+  width: 25px;
+  background-position: -486px -48px;
+  background-image: url(../images/main-sprite.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.subheader .refresh-button:active {
+  background-position: -486px -81px; 
+}
+
+.subheader .details {
+  display: inline-block;
+  vertical-align: middle;
+  color: #8F8F8F;
+}
+
+.subheader .details-wrapper {
+  line-height: 42px;
+}
+
+.subheader .details-wrapper > div {
+  display: inline-block;
+  line-height: initial;
+}
+.subheader .button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.subheader .icon-phone {
+  background: url(../images/main-sprite.png) no-repeat;
+  width: 24px;
+  height: 38px;
+  background-position: -578px 0px;
+  background-size: 800px 400px;
+  vertical-align: middle;
+}
+.subheader .divider {
+  margin: 0px 8px;
+  vertical-align: middle;
+  width: 0px;
+  height: 0.675em;
+  box-shadow: 0px 0px 0.5px 1px #8A8684;
+}
+.subheader .link-phone {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+
+  .subheader .back-button {
+    background-image: url(../images_2x/main-sprite.png);
+    background-size:800px 400px;
+  }
+  .subheader .refresh-button {
+    background-image: url(../images_2x/main-sprite.png);
+    background-size:800px 400px;
+  }
+  .subheader .icon-phone {
+    background-image: url(../images_2x/main-sprite.png);
+    background-size:800px 400px;
+  }
+
+}
+

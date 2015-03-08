@@ -1,0 +1,574 @@
+.header-wrap {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 88px;
+	background-position: 0px -729px;
+	background-image: url(../images/repeat-x-sprite.png);
+	background-repeat: repeat-x;
+	background-color: #00497e;
+	border-top: 1px solid #2f2f2f;
+	border-bottom: 1px solid #2f2f2f;
+}
+.header-wrap nav li {
+	display: inline;
+	padding: 8px;
+}
+
+/* ---- ETRADE and Home Icon --- */
+.etrade_icon {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	background-position: -188px -212px;
+	background-image: url(../images/main-sprite.png);
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+}
+.home_icon_unselected, .home_icon_selected {
+	position: absolute;
+	top: 18px;
+	left: 52px;
+	width: 42px;
+	height: 32px;
+}
+.home_icon_unselected {
+	background: url(../images/header/icon-home.png) no-repeat;
+	background-position: 52% 15%;
+	margin-top: -8px;
+}
+.home_icon_selected {
+	background: url(../images/header/icon-home_selected.png) no-repeat;
+	margin-top: -12px;
+}
+
+.home_icon_unselected:active {
+	opacity: 0.6;
+}
+.home_icon_selected .goto-dashboard {
+	padding: 0 22px 18px 19px;
+}
+.home_icon_unselected .goto-dashboard {
+	padding: 8px 20px 17px 20px;
+}
+
+/* ---- Main Menu --- */
+.header-wrap nav a {
+	color: #9B9B9B;
+}
+.header_menu a {
+	padding: 0 10px 0 10px;
+}
+.header_menu:active {
+	background-color: #3E3E3E;
+	border-radius: 5px;
+}
+.header_menu:active a {
+	color: #fff;
+}
+.header-wrap div.selected {
+	background: url(../images/header/menubar_arrow_on.png) 90% 12px #3e3e3e no-repeat;
+	border-radius: 5px;
+}
+.header-wrap div.selected a {
+	color: #fff;
+}
+.header_research, .header_accounts, .header_alerts {
+	position: absolute;
+	top: 7px;
+}
+.header_research {
+	left: 100px;
+}
+.header_accounts {
+	left: 198px;
+}
+.header_alerts {
+	left: 298px;
+}
+.header_research, .header_accounts {
+	background: url(../images/header/menubar_arrow_off.png) 90% 12px no-repeat;
+	padding: 9px 0px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.header_research:active, .header_accounts:active {
+	background: url(../images/header/menubar_arrow_on.png) 90% 12px #3E3E3E no-repeat;
+}
+.header_research a, .header_accounts a {
+	padding: 0 20px 0 10px;
+}
+.header-wrap .header_menu.selected_sticky {
+	background: url(../images/header/menubar_arrow_on.png) 90% 12px #3E3E3E no-repeat;
+	border-radius: 5px;
+}
+.header-wrap .header_menu.selected_sticky a {
+	color: #fff;
+}
+.header_alerts .alerts_text {
+	float: left;
+	margin-right: 2px;
+	padding: 9px 0px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.header_alerts .alerts_alert {
+	display: none;
+	float: left;
+	margin-top: 4px;
+}
+.alerts_number {
+	border-radius: 4px;
+	background-color: #ff0000;
+	color: #fff;
+	padding: 5px 6px 8px 6px;
+	height: 11px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+/* ---- Main Menu dropdown --- */
+.research_dropdown {
+	top: 42px;
+	left: 20px;
+}
+.accounts_dropdown {
+	top: 42px;
+	left: 120px;
+}
+.research_dropdown, .accounts_dropdown {
+	display: none;
+	position: absolute;
+	background-color: #161616;
+	width: 250px;
+	border: 1px solid #4f4f4f;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	z-index: 1000;
+}
+.research_dropdown > .content, .accounts_dropdown > .content {
+	width: 240px;
+	background-color: #fff;
+}
+.research_dropdown > .content li, .accounts_dropdown > .content li {
+	display: block;
+	height: 25px;
+	margin-right: 0;
+	font-weight: bold;
+	clear: both;
+}
+.research_dropdown > .content li img, .accounts_dropdown > .content li img {
+	float: left;
+	vertical-align: middle;
+}
+.research_dropdown > .content li div.menu_item, .accounts_dropdown > .content li .menu_item {
+	float: left;
+	margin: 15px 0 0 4px;
+}
+.research_dropdown > .content, .accounts_dropdown > .content{
+	width: 240px;
+	background-color: #fff;
+}
+.research_dropdown > .content li, .accounts_dropdown > .content li{
+	display: block;
+	margin-right: 0;
+	font-weight: bold;
+}
+.research_dropdown > .content li, .accounts_dropdown > .content li {
+	height: 25px;
+}
+.quote_dropdown > .content li {
+  height: auto; /* height is controlled via padding */
+  position: relative;
+  width: 100%;
+  left: 0em;
+  box-sizing: border-box;
+  padding: 2.5ex 0px 5ex 3ex;
+}
+.quote_dropdown > .content{
+	background:#ffffff;
+}
+.research_dropdown .arrow {
+	top: -10px;
+	left: 115px;
+}
+.research_dropdown > .content {
+	margin: 5px 5px 5px 5px;
+}
+.research_dropdown > .content li {
+	padding: 0 0 15px 2px;
+	cursor: pointer;
+}
+.research_dropdown > .content li:active, .research_dropdown > .content li:hover, .research_dropdown > .content li.selected_sticky {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4b94cb), color-stop(1,#0c74bd) );
+	background: -moz-linear-gradient( center top, #4b94cb 5%, #0c74bd 100% );
+	color: #fff;
+}
+.research_dropdown > .content li.separator, .accounts_dropdown > .content li.separator {
+	border-bottom: 2px solid #9e9e9e;
+}
+.accounts_dropdown .arrow {
+	top: -10px;
+	left: 115px;
+}
+.accounts_dropdown > .content {
+	margin: 5px 5px 5px 5px;
+	padding: 0;
+}
+.accounts_dropdown > .content li.accounts_dropdown_overview:hover, .accounts_dropdown > .content li#trade_modal:hover, .accounts_dropdown > .content li#transfer_modal:hover, .accounts_dropdown > .content li.clickableAccount:hover, .accounts_dropdown > .content li.clickableAccount:active, .accounts_dropdown > .content li.selected_sticky {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4b94cb), color-stop(1,#0c74bd));
+	background: -moz-linear-gradient( center top, #4b94cb 5%, #0c74bd 100% );
+	color: #fff;
+}
+.accounts_dropdown > .content li.unauth {
+	padding: 0 0 10px 4x;
+	font-weight: bold;
+	height: 25px;
+	cursor: pointer;
+}
+.accounts_dropdown > .content li.accounts_dropdown_overview {
+	border-bottom: 1px solid #ebeaea;
+}
+.accounts_dropdown > .content li.accounts_dropdown_overview, .accounts_dropdown > .content li#trade_modal, .accounts_dropdown > .content li#transfer_modal {
+	padding: 0 0 10px 4px;
+	font-weight: bold;
+	height: 30px;
+	cursor: pointer;
+}
+.accounts_dropdown > .content li.bottom_first {
+	border-top: 2px solid #9E9E9E;
+}
+.accounts_dropdown > .content li header {
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+.accounts_dropdown > .content li .total {
+	float: left;
+	width: 70px;
+}
+.accounts_dropdown > .content li .quote {
+	float: left;
+	width: 100px;
+}
+
+/* ---- Quote Search --- */
+.header-wrap .header_quote_search {
+	position: absolute;
+	top: 6px;
+	right: 150px;
+	width: 100px;
+	border-radius: 30px;
+	height: 28px;
+	padding-left: 30px;
+	padding-top: 2px;
+	font-weight: bold;
+	border: none;
+	box-shadow: inset 1px 1px 2px #161616;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.header-wrap .quote_search_unfocus {
+	background: url(../images/search_box_bg.png) #363636 no-repeat 8px 9px;
+}
+.header-wrap .quote_search_focus {
+	background: url(../images/search_box_selected_bg.png) #fff no-repeat 8px 8px;
+}
+
+.header-wrap .header_quote_search.selected {
+	background-color: #fff;
+	color: #000;
+}
+
+/* ---- Log In btn --- */
+.header_btn_sign_in {
+	position: absolute;
+	top: 7px;
+	right: 60px;
+	border-radius: 6px;
+	padding: 7px 12px;
+}
+
+/* ---- Settings --- */
+.settings_icon_unselected, .settings_icon_selected {
+	position: absolute;
+	/*top: 18px;*/
+	right: 0;
+	cursor: pointer;
+}
+.settings_icon_unselected {
+	background: url(../images/header/icon-settings.png) no-repeat;
+	width: 55px;
+	height: 40px;
+	background-position-y: 12px;
+	background-position-x: center;
+}
+.settings_icon_unselected:active {
+	opacity: 0.6
+}
+.settings_icon_selected {
+	background: url(../images/header/icon-settings_selected.png) no-repeat;
+	width: 50px;
+	height: 40px;
+	background-position-y: 7px;
+	background-position-x: 4px;
+}
+
+
+/* ---- Sign in modal --- */
+form.signin_form input, .ben_section input{
+	width: 25%;
+	height: 24px;
+	padding-left: 5px;
+	width: 150px;
+	border-radius: 20px;
+}
+#boxes .dlogin_modal {
+	position: fixed;
+	top: 44px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index : 50;
+}
+.dlogin_modal .login_modal_select {
+	position: relative;
+	width: 125px;
+	top: 0;
+	left: 5px;
+}
+.dlogin_modal #login_modal_select_display {
+	width: 125px;
+	top: 140px;
+	right: -31px;
+}
+.dlogin_modal .signin_form .sign_in {
+	padding: 7px;
+	width: 118px;
+	margin-top: 20px;
+}
+
+/* ---- Click mask --- */
+#header_nav_click_mask {
+	top: 0;
+	opacity: 0.5;
+}
+#click_mask {
+	top: 42px;
+	opacity: 0.6;
+	background: #000000; /* Old browsers */
+    background: -moz-linear-gradient(left,  #000000 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000000), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #000000 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #000000 0%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #000000 0%,#000000 100%); /* IE10+ */
+    background: linear-gradient(to right,  #000000 0%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+}
+#header_nav_click_mask, #click_mask {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 900;	
+}
+
+/* ---- Agreement Dialog --- */
+.usrAgrmtDialogTitle {
+	width: 100%;
+	text-align: center;
+}
+
+/***************Open Account *******************/
+.signIn_OpenAccount, .signIn_ForgotPassword {
+	display: none;
+	width: 95%;
+	height: 90%;
+	top: 5%;
+	left: 2%;
+	z-index: 5000;
+	position: fixed;
+	border: 6px solid #121212;
+	background: white;
+}
+.signIn_OpenAccount iframe, .signIn_ForgotPassword iframe {
+	width: 100%;
+	height: 95.8%;
+	overflow: scroll;
+}
+.accounts_dropdown > .content li.accountSummaryInOverviewMenu {
+	position: relative;
+	overflow: hidden;
+	height: 151px;
+}
+.accounts_dropdown > .content li.accountSummaryInOverviewMenu li {
+	height: 25px;
+	border-bottom: 1px solid #ebeaea;
+}
+.accounts_dropdown > .content li.clickableAccount {
+	padding: 12px 0px 0px 48px;
+	font-weight: normal;
+	color: #242424;
+	background: url(../images/dashboard/arrow_right1.png) 90% 50% no-repeat;
+	cursor: pointer;
+}
+.accounts_dropdown > .content li.wait {
+	padding: 15px 0px 0px 60px;
+	background: url(../images/global/spinner_small_transparent.gif) 10px 5px no-repeat;
+	cursor: default;
+	height: 30px;
+}
+
+/*==============RADIO BUTTON STYLES=================*/
+.nav_radio_option {
+	float: right;
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+}
+.nav_radio_unchecked {
+	background-image:url("../images/radiounchecked_big.png");
+	background-repeat:no-repeat;
+	background-size: 25px 25px;
+	background-position-y: 0.5px;
+}
+.nav_option_radio_active {
+	background-image: url('../images/radio_on.png');
+	background-repeat: no-repeat;
+}
+.nav_option_radio_inactive {
+	background-image: url('../images/radio_off.png');
+	background-repeat: no-repeat;
+}
+.nav_radiolbl {
+	padding-bottom: 5px;
+}
+.nav_option_div {	
+	float: left;
+	margin-right: 25px;	
+	text-align: left;
+	text-indent: 4px;
+}
+.nav_img_container {
+	float:left;
+	margin-top:9px;
+	margin-left:5px;
+	height:30px;
+	width:30px;
+}
+.nav_img {
+	background-repeat:no-repeat;
+	background-image: url('../images_2x/main-sprite.png');
+	background-size:800px 400px;
+	height:30px;
+	width:30px;
+}
+.nav_img_container.nav_img {
+	margin:0px;
+}
+.nav_img.ntrading {
+	background-position:-105px -264px;
+}
+.nav_img.noverview {
+	background-position:-234px -264px;
+}
+.nav_img.ntransfer {
+	background-position:-200px -264px;
+}
+.nav_img.nquotes {
+	background-position:-330px -264px;
+}
+.nav_img.nwatchlist {
+	background-position:-299px -264px;
+}
+.nav_img.nnews {
+	background-position:-265px -264px;
+}
+.nav_img.ncnbc {
+	background-position:-167px -264px;
+}
+.nav_img.ncompare {
+	background-position:-134px -264px;
+}
+
+.appbookmark_androidimg{
+	margin-top: 1%;
+	margin-left: 4%;
+	background: url('../images/android_browser_add.png') no-repeat ;
+	height: 132px;
+	width: 479px;	
+	opacity: 100%;
+}
+.appbookmark_iosimg{
+	margin-top: 1%;
+	margin-left: 4%;
+	background: url('../images/ios_browser_add.png') no-repeat ;
+	height: 138px;
+	width: 413px;	
+	opacity: 100%;
+}
+
+.cnbcvideoplayer{
+	width: 320px;
+	height: 336px;
+}
+.container_video{
+    position: absolute;
+    bottom:0px;
+	right: 0;
+    z-index: 1050;
+    display:none;
+    background-color:#000000;   
+}
+
+/* 7 inch device */
+.seveninch .header-wrap .header_quote_search {
+    width: 70px;
+}
+
+/* Media Styles */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.etrade_icon {
+		background-image: url(../images_2x/main-sprite.png);
+		background-size:800px 400px;
+	}
+	.home_icon_unselected {
+		background-image: url(../images_2x/header/icon-home.png);
+		background-repeat: no-repeat;
+		background-size:20px 20px;
+	}
+	.home_icon_selected {
+		background-image: url(../images_2x/header/icon-home_selected.png);
+		background-repeat: no-repeat;
+		background-size:42px 32px;
+	}
+	.header-wrap .quote_search_unfocus {
+		background-image: url(../images_2x/header/search_box_bg.png);
+		background-color: #363636;
+		background-repeat: no-repeat;
+		background-position:8px 9px;
+		background-size:14px 15px;
+	}
+	.header-wrap .quote_search_focus {
+		background-image: url(../images_2x/header/search_box_selected_bg.png);
+		background-color:  #fff;
+		background-repeat: no-repeat;
+		background-position:8px 8px;
+		background-size:14px 15px;
+	}
+	.settings_icon_unselected {
+		background-image: url(../images_2x/header/icon-settings.png);
+		background-repeat: no-repeat;
+		background-size:22px 20px;
+	}
+	.settings_icon_selected {
+		background-image: url(../images_2x/header/icon-settings_selected.png);
+		background-size:38px 30px;
+	}
+}

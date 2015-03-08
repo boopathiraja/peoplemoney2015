@@ -1,0 +1,431 @@
+.alloc_chart_td_outer {
+	width:122px;
+	height:113px;
+}
+.alloc_chart {
+	height:130px;
+	width:113px;
+	margin:auto;
+}
+.alloc_chart_table {
+	width:100%;
+	height:123px;
+}
+#investment_charts_allocation .alloc_chart_table {
+	width:90%;
+	margin:auto;
+}
+.alloc_chart_legend {
+	border:0.4px solid white;
+}
+.alloc_chart_label_line {
+	float:left;
+	background:white;
+	padding-left:5px;
+	padding-right:5px;
+	margin-left:-2px;
+}
+.alloc_chart_label_pct {
+	float:right;
+	background:white;
+	padding-left:5px;
+	padding-right:12px;
+}
+.bubble-arrow {
+  border-color: white transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height:0;
+  width:0;
+  position:absolute;
+  left:62px;
+  opacity:0.8;
+}
+.chart_click_outside {
+	z-index:10;
+	min-width:145px;
+	min-height:51px;
+	border:1px solid rgba(122,122,122,0.6);
+	box-shadow:0px 0px 4px #ccc;
+}
+.chart_click_bg_top {
+	height:6px;
+	background:rgba(0,0,0,0.85);
+}
+.chart_click_bg {
+	width:100%;
+	height:37px;
+	text-align:center;
+	margin:auto;
+	padding-top:8px;
+	background:rgba(255,255,255,0.9);
+	font-size:12px;
+}
+
+/* ========= LINE CHART FUNCTIONS =============*/
+body {
+	font-family:Helvetica;
+}
+.chart_exterior {
+	background-color: #F4F4F4;
+	border: 1px solid #C4C4C4;
+}
+.chart_exterior.expanded {
+	height:100%;
+}
+.chart_exterior.small {
+	height:178px;
+}
+.chart_small_container {
+	width: 100%;
+	height: 264px;
+	margin-bottom: 5px;
+	padding: 0px;
+	position: relative;
+}
+.chart_dashboard_container {
+	margin-left:5px;
+	width: 100%;
+	height: 144px;
+	margin-bottom: 5px;
+	padding: 0px;
+	position: relative;
+}
+.chart_overview_container {
+	margin-left:5px;
+	width: 100%;
+	height: 200px;
+	margin-bottom: 5px;
+	padding: 0px;
+	position: relative;
+}
+.chart_large_container {
+	width: 100%;
+	height: 290px;
+	margin-bottom: -8px;
+	padding: 0px;
+	position: relative;
+}
+.chart_large_container_expanded {
+	position:absolute;
+	width:100%;
+	bottom:185px;
+	top:50px;
+
+}
+.quotes_content .chart_large_container {
+	height: 235px;
+}
+.chart_volume_container {
+	height:100px;
+	margin-bottom:-2px;
+}
+.chart_volume_container.expanded {
+	width:100%;
+	position:absolute;
+	bottom:95px;
+}
+.chart_period_table {
+	display: table;
+	width: 100%;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, color-stop(0, #E6E5E5), color-stop(1, #F2F2F2));
+	border-top: 1px solid #F4F4F4;
+}
+.chart_period_table.large {
+	width:400px;
+	margin:9px auto;
+	border:1px solid #c4c4c4;
+	box-shadow:0px 0px 2px 2px #ddd;
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+}
+.chart_period_row, .chart_detail_row {
+	display:table-row;
+}
+.chart_period_cell {
+	display: table-cell;
+	height: 100%;
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: bold;
+	width: 14.25%;
+	cursor: pointer;
+	font-size: 9pt;
+	border-right: 1px solid #C4C4C4;
+	border-top:1px solid #c4c4c4;
+	border-bottom:1px solid #c4c4c4;
+}
+.chart_period_cell.active, .chart_period_cell_large.active {
+	color: white;
+	background: #aaa;
+	box-shadow: inset 0 0 15px 5px #777;
+	text-outline:1px 1px #000;
+}
+.chart_period_cell_large {
+	width:50px;
+	display: table-cell;
+	padding-bottom:5px;
+	padding-top:5px;
+	text-align: center;
+	font-size: 12px;
+	border-right:1px solid #c4c4c4;
+	cursor: pointer;
+}
+.chart_period_cell.last{
+	border-right:none;
+}
+.chart_period_cell_large.last {
+	border-right:none;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+}
+.chart_period_cell_large.first {
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
+}
+.chart_small_loading_container {
+	width:100%;
+	position:relative;
+}
+.chart_small_loading {
+	width:100%;
+	position:absolute;
+	margin:auto;
+	text-align:center;
+}
+.chart_small_loading.small {
+	margin-top:-115px;
+}
+.chart_small_loading.medium {
+	margin-top: -350px;
+}
+.quotes .chart_small_loading.medium {
+  margin-top: -250px;
+}
+.chart_period_header {
+	width:100%;
+	height:45px;
+	border:1px solid white;
+	box-shadow:0px 10px 20px -10px #555;
+}
+.chart_period_header.expanded {
+	border-top:1px solid white;
+	border-bottom:1px solid white;
+	border-left:none;
+	border-right:none;
+	top:0px;
+}
+.chart_wrapper.expanded {
+	height:100%;
+}
+.tickLabel {
+	font-size: 10pt;
+	color: gray;
+	font-weight: 400;
+}
+.chart_details_container {
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, color-stop(0, #085286), color-stop(1, #0d639f));
+	height:95px;
+	width:100%;
+	color:white;
+	border:1px solid white;
+}
+.quotes .chart_details_container {
+  border: none;
+  position: absolute;
+}
+.chart_details_container.expanded {
+	border:none;
+	position:absolute;
+	bottom:0px;
+}
+.chart_detail_top_row {
+	position:relative;
+	width:100%;
+	height:20px;
+}
+.chart_detail_date {
+	font-family:Helvetica;
+	display:inline;
+	font-size:18px;
+	font-weight:bold;
+	float:left;
+	padding-left:35px;
+	padding-top:10px;
+}
+.chart_detail_date_small {
+	float:right;
+	display:inline;
+	font-size:14px;
+	padding-right:35px;
+	padding-top:11px;
+}
+.chart_detail_table {
+	padding-top:10px;
+	line-height:20px;
+	display:table;
+	height:46px;
+	width:100%;
+	margin:auto;
+}
+.chart_detail_cell.head {
+	font-size:12px;
+	color:#d1ebfd;
+}
+.chart_detail_cell {
+	font-weight:bold;
+	display:table-cell;
+	font-size:14px;
+	padding-left:35px;
+}
+.chart_detail_cell.last {
+	border-left:2px solid #85acc7;
+}
+
+/*============== */
+td#brokerage_chart_alloc_legend table {
+	width:100%;
+}
+
+td#brokerage_chart_alloc_legend td.legendColorBox {
+	width:16px;
+}
+td#brokerage_chart_alloc_legend td.legendLabel {
+	background-image:url(../../images/repeat-x-sprite.png);
+	background-position:0px -648px;
+	background-repeat:repeat-x;
+	font-size:9pt;
+	font-weight:bold;
+	color:gray;
+	height:16px;
+}
+.full_chart {
+	margin-right: 7px;
+	width:37px;
+	height:40px;
+	float:right;
+	background-position: -564px -41px;
+	background-image: url(../../images/main-sprite.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.full_chart:active {
+	background-position: -564px -72px;
+}
+.chart_options {
+	margin-right: 10px;
+	width:31px;
+	height:41px;
+	float:right;
+	background-position: -649px -41px;
+	background-image: url(../../images/main-sprite.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.chart_options:active {
+	background-position: -649px -72px;
+}
+.chart_settings_popup {
+	top:6px;
+	right:90px;
+	position:absolute;
+	background-color:#161616;
+	width:250px;
+	border:1px solid #4f4f4f;
+	border-radius:5px;
+	z-index:1000;
+}
+.chart_settings_popup_header {
+	font-size:15px;
+	position:relative;
+	font-weight:bold;
+	width:235px;
+	top:8px;
+	margin:-3px 0px 12px 54px;
+	color:#ebebeb;
+}
+.chart_settings_wrapper {
+	position:relative;
+	z-index:1;
+	width:auto;
+	height:45px;
+	background-color:white;
+}
+.chart_settings_popup .arrow {
+	top:6px;
+	left:250px;
+}
+.charting_checkbox {
+	float:left;
+	margin-left:0px;
+	width:34px;
+	height:34px;
+	background-position: -385px -123px;
+	background-image: url(../../images/main-sprite.png);
+	background-repeat: no-repeat;
+}
+.charting_checkbox.on {
+	background-position: -427px -123px;
+	background-image: url(../../images/main-sprite.png);
+	background-repeat: no-repeat;
+}
+.chart_settings_inner_container {
+	margin:10px 5px 5px 5px;
+}
+.chart_settings_ul li {
+	height:37px;
+	padding:5px 0px 5px 20px;
+}
+.chart_ext_hours_name {
+	float:left;
+	padding:10px 0px 0px 10px;
+	color:#1d1d1d;
+	font-weight:bold;
+}
+.whoever_made_quote_overlay_styled_incorrectly_causeing_me_to_do_this {
+	margin:3px;
+	width:100px;
+	padding:6px 8px;
+	font-family: Avenir, Arial;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+	line-height: 14px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: none;
+	background-color: #1E1E1E;
+	border: 1px solid #3E3E3E;
+	color: #BCBCBC;
+	text-shadow: none;
+}
+.whoever_made_quote_overlay_styled_incorrectly_causeing_me_to_do_this:active {
+	background-color: #535353;
+	color: #252525;
+}
+.chart_loading {
+	color: #fff;
+}
+.accounts_chart_thin {
+	margin: 0px auto;
+}
+
+/* 7 inch device */
+.seveninch #tWatchListDetailedChart .chart_dashboard_container {
+    width: 95%;
+}
+
+/* Media Styles */
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.full_chart, .chart_options {
+		background-image: url(../../images_2x/main-sprite.png);
+		background-size:800px 400px;
+	}
+}

@@ -18,7 +18,7 @@
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>Share360.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
   </welcome-file-list>
 
 </web-app>

@@ -1,0 +1,331 @@
+/*=============  OPEN ORDERS ==========*/
+/* TODO - AST - group these two into the same category (most likely possible) */
+.orders_first {  width:4%; margin-left:0%; }
+.orders_second { width:16%; margin-left:5%;min-width:137px;}
+.orders_third { width:7%; margin-left:27%;}
+.orders_fourth { width:10%; margin-left:34%;width:50px;}
+.orders_fifth { width:7%; margin-left:43%;}
+.orders_sixth { width:10%; margin-left:51%;}
+.orders_seventh { width:11%; margin-left:61%;min-width:73px;}
+.orders_eigth { width:7.5%; margin-left:73%;}
+.orders_ninth { width:7%; margin-left:81%;}
+.orders_tenth { width:11%; margin-left:88%;}
+
+.oorders_first   { width:8%; padding:0px 0px 0px 5px;}
+.oorders_second  { margin-left:8%; width:14%; padding-left: 0px !important;}
+.oorders_third   { margin-left:22%; width:12%; padding-left: 0px !important;}
+.oorders_fourth  { margin-left:34%; width:12%; padding-left: 0px !important;}
+.oorders_fifth   { margin-left:46%;width:12%; padding-left: 0px !important;}
+.oorders_sixth   { margin-left:58%;width:14%; padding-left: 0px !important;}
+.oorders_seventh { margin-left:72%;width:9%; padding-left: 0px !important;}
+.oorders_eigth   { margin-left:81%; width:9%; padding-left: 0px !important;}
+.oorders_ninth   { margin-left:90%; width:10%; padding-left: 0px !important;}
+
+.seveninch .orders_seventh {
+	margin-left: 60%;
+}
+/*=============== ESPP ORDERS =============*/
+.espp_orders .orders_item, .espp_open_orders .orders_item {
+	bottom: 0px;
+	top: 3px;
+}
+.espp_account_investsub_orders_orders .orders_list_container { 
+	height:45px;
+}
+.espp_orders[class~=orders_list_container_option], .espp_open_orders[class~=orders_list_container_option] {
+	height: 44px;
+}
+.espp_orders .orders_list_option, .espp_open_orders .orders_list_option {
+	height: 43px;
+}
+.espp_orders .orders_first { width:14% !important; margin-left:0% !important; padding-left: 7px !important; }
+.espp_orders .orders_second { width:20% !important; margin-left:14% !important; min-width:0px  !important;}
+.espp_orders .orders_third { width:28% !important; margin-left:34% !important; }
+.espp_orders .orders_fourth { width:28% !important; margin-left:62% !important; }
+.espp_orders .orders_fifth { width:10% !important; margin-left:90% !important; top:0px;}
+
+.espp_orders .orders_list_option.odd div.active, 
+.espp_orders .orders_list_option.even div.active, 
+.espp_orders .orders_list.odd div.active,
+.espp_orders .orders_list.even div.active,
+.espp_open_orders .orders_list_option.odd div.active, 
+.espp_open_orders .orders_list_option.even div.active, 
+.espp_open_orders .orders_list.odd div.active,
+.espp_open_orders .orders_list.even div.active {background-color:#fff;}
+.espp_orders .orders_list.even div.active, .espp_open_orders .orders_list.even div.active{background-color:#fff;}
+.espp_orders .orders_list.odd, .espp_orders .orders_list_option.odd,
+.espp_open_orders .orders_list.odd, .espp_open_orders .orders_list_option.odd{ background:#fff; }
+.espp_orders .orders_list.even, .espp_orders .orders_list_option.even, 
+.espp_open_orders .orders_list.even, .espp_open_orders .orders_list_option.even { background:#fff; }
+.espp_orders .orders_list.oddopen, .espp_orders .orders_list_option.oddopen, 
+.espp_open_orders .orders_list.oddopen, .espp_open_orders .orders_list_option.oddopen { background:#ecf5fe; }
+.espp_orders .orders_list.evenopen, .espp_orders .orders_list_option.evenopen,
+.espp_open_orders .orders_list.evenopen, .espp_open_orders .orders_list_option.evenopen { background:#ecf5fe; }
+.espp_orders .orders_list_option.oddopen.active, .espp_orders .orders_list_option.oddopen.active { background-color:#fff; }
+.espp_open_orders .orders_list_option.evenopen.active, .espp_open_orders .orders_list_option.evenopen.active { background-color:#fff; }
+.espp_orders .orders_item.active, .espp_open_orders .orders_item.active { background-color:transparent; top:3px;}
+
+
+.espp_open_orders .orders_first { width:9% !important; margin-left:0% !important; padding-left: 4px;}
+.espp_open_orders .orders_second { width:12% !important; margin-left:9% !important; min-width:12% !important; }
+.espp_open_orders .orders_third { width:16% !important; margin-left:21% !important; }
+.espp_open_orders .orders_fourth { width:16% !important; margin-left:37% !important; }
+.espp_open_orders .orders_fifth { width:7% !important; margin-left:53% !important; }
+.espp_open_orders .orders_sixth { width:7% !important; margin-left:60% !important; }
+.espp_open_orders div.orders_fifth, .espp_open_orders div.orders_sixth{ text-align: center;}  
+.espp_open_orders .orders_seventh { width:7% !important; margin-left:67% !important; min-width:8% !important;text-align: center;}
+.espp_open_orders .orders_eigth { width:7% !important; margin-left:74% !important; text-align: center;}
+.espp_open_orders .orders_ninth { width:10% !important; margin-left:81% !important;text-align: center;}
+.espp_open_orders .orders_tenth { width:8% !important; margin-left:91% !important; }
+
+.espp_orders .orders_list_header.arrow_down, .espp_open_orders .orders_list_head_trading.arrow_down {
+	background: url(../../images/unspritable/arrow_down.png) no-repeat 16px 35px;
+}
+.espp_orders .orders_list_header.arrow_up, .espp_open_orders .orders_list_head_trading.arrow_up {
+	background: url(../../images/unspritable/arrow_up.png) no-repeat 23px 28px;
+}
+.espp_orders .order_details .arrow {
+	background-image: url("../../images/main-sprite.png");
+	background-position: -777px -221px;
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	background-repeat: repeat;
+	float: right;
+	margin-right: 25%;
+}
+.orders_list_head_trading {
+	z-index:100;
+}
+.orders_list_head_trading.active {
+	/*Was bold*/
+}
+.orders_list_head_trading.arrow_up {
+	background: url(../../images/unspritable/arrow_down.png) no-repeat 16px 35px;
+}
+.orders_list_head_trading.arrow_down {
+	background: url(../../images/unspritable/arrow_up.png) no-repeat 17px 11px;
+}
+.orders_list_head_trading.abos_num {  width:8%; padding-left:5px;} }
+.orders_list_head_trading.abos_dnt {  margin-left:8%; width:14%;}
+.orders_list_head_trading.abos_typ {  margin-left:22%; width:12%; }
+.orders_list_head_trading.abos_ord { margin-left:34%; width:12%; }
+.orders_list_head_trading.abos_qty {  margin-left:46%;width:12%; }
+.orders_list_head_trading.abos_sym {  margin-left:58%;width:14%; }
+.orders_list_head_trading.abos_pty { margin-left:72%;width:9%; }
+.orders_list_head_trading.abos_trm { margin-left:81%; width:9%; }
+.orders_list_head_trading.abos_prc {  margin-left:90%; width:10%; }
+
+
+
+.orders_head_twoeighty { width:280px; }
+.orders_head_oneten {width:110px;}
+.orders_head_onehundred {width:100px;}
+.orders_head_onethirty {width:130px;}
+.orders_head_onesixty {width:160px;}
+.orders_head_oneeighty {width: 180px;}
+.orders_head_oneninty {width: 190px;}
+.orders_head_twotwentyfive {width: 225px;}
+
+.orders_header {
+	font-size:11px;
+	color:gray;
+	text-align:left;
+	display:table-row-group;
+	padding-left:15px;
+}
+.orders_header_table {
+	width:100%;
+	display:table;
+	padding-top: 15px;
+	border-bottom:1px solid #A7A7A7;
+	background-image: url(../../images/repeat-x-sprite.png);
+	background-position: 0px -436px;
+}
+.orders_header_table_overlay {
+	display:table;
+	padding-bottom:4px;
+	padding-top:8px;
+	border-bottom:1px solid #b0b0b0;
+	width:702px;
+}
+.orders_list {
+	height:41px;
+}
+.orders_list_option {
+	height:58px;
+}
+.orders_list, .orders_list_option {
+	display:table-row;
+	border-bottom:1px solid #d0d0d0;
+	width:100%;
+	position:absolute;
+	cursor:pointer;
+}
+.orders_list_option.top {
+	border-bottom:none;
+	height:59px;
+}
+.orders_list_option.bottom {
+	border-top:none;
+}
+.orders_list_head_trading {
+	display:table-cell;
+	vertical-align:bottom;
+	padding-bottom:10px;
+	cursor: pointer;
+	/*
+	background: url(../../images/dashboard/table_header_line.png) repeat-x center 35px;
+	*/
+}
+
+/*=========== Orders Header on Accounts ========*/
+.orders_list_header {
+	padding-top: 7px;
+	padding-left: 5px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.orders_header_acct {
+	height:38px;
+	font-size:11px;
+	color:gray;
+	text-align:left;
+	padding-left:15px;
+	background-position: 0px -773px;
+	background-image: url(../../images/repeat-x-sprite.png);
+	background-repeat: repeat-x;
+}
+.espp_open_orders .orders_header_acct{
+	background-position: 0px -436px;
+}
+.orders_header_table_acct {
+	position:relative;
+	height:38px;
+	width:100%;
+	padding-top: 15px;
+}
+.orders_list_header_acct {
+	vertical-align:bottom;
+	padding-bottom:13px;
+	cursor: pointer;
+}
+.orders_list_header .sort_arrow {
+	height: 47px;
+}
+.orders_list_header .number {
+	padding-left: 15px;
+}
+.orders_list_header.active {
+	color: #808080;
+	/*font-weight:bold;*/
+}
+.orders_list_header .sort_arrow.arrow_down {
+	background: url(../../images/unspritable/arrow_down.png) no-repeat 30px 27px;
+}
+.orders_list_header .sort_arrow.arrow_up {
+	background: url(../../images/unspritable/arrow_up.png) no-repeat 30px 27px;
+}
+.orders_item {
+	position:absolute;
+	display:table-cell;
+	font-size:14px;
+	line-height:16px;
+	color: #111;
+	margin-top:10px;
+}
+.orders_item.active {
+	top:0px;
+	bottom:0px;
+	padding-top:10px;
+	margin-top:0px;
+	/*background-color:#ddedff;*/
+}
+
+.orders_item.padding_left_5 {
+	padding-left: 3px;
+	margin-top:0px;
+}
+.orders_item.padding_left_5.active {
+	padding-top:0px;
+	margin-top:0px;
+}
+.orders_item.padding_left_7 {
+	padding-left: 7px;
+}
+.orders_item.pl5 {
+	padding-left: 5px;
+}
+.order_symbol_table_cell {
+	padding-top:13px;
+	position:relative;
+	width:70px;
+	height:100%;
+	line-height:16px;
+}
+.order_symbol_table_cell_option {
+	padding-top:5px;
+	margin:auto;
+	position:relative;
+	width:70px;
+	height:100%;
+	line-height:10px;
+}
+.orders_list_container { 
+	text-align:left;
+	height:43px;
+}
+.orders_list_container_option { 
+	height:60px;
+}
+
+
+.orders_list_option.odd div.active, 
+.orders_list_option.even div.active, 
+.orders_list.odd div.active,
+.orders_list.even div.active {/*background-color:#f3f3f3;*/} /* Commented the background color to make it consistent across all the screens */ 
+.orders_list.odd, .orders_list_option.odd { /*background:#fafafa;*/ }
+.orders_list.even, .orders_list_option.even { /*background:#ffffff;*/ }
+.orders_list.oddopen, .orders_list_option.oddopen { background:#ecf5fe; /*background:#e4edf6;*/ }
+.orders_list.evenopen, .orders_list_option.evenopen { background:#ecf5fe; }
+.orders_list_option.oddopen.active { background-color:#ddedff; height:100%; }
+.orders_list_option.evenopen.active { background-color:#ddedff; height:100%; }
+.orders_list_symbol { 
+	padding:0px;
+	margin:auto;
+	text-align:center;
+}
+.activeCell { 
+	background-image: url(../../images/unspritable/arrow_down.png);
+	background-position-x:30%;
+	background-repeat: no-repeat;	
+}
+
+/* Media Styles */
+
+@media all and (orientation: portrait) {
+    /* 7 inch device */
+    .seveninch .orders_second {
+        min-width: 80px;
+        margin-left: 7%;
+        width: 16%;
+    }
+    .seveninch .orders_third {
+        margin-left: 23%;
+        width: 10%;
+    }
+    .seveninch .orders_fourth {
+        margin-left: 32%;
+        width: 10%;
+    }
+}
+
+@media all and (orientation: landscape) {
+	.seveninch .orders_third {
+		margin-left: 26%;	
+	}
+	.seveninch .orders_fourth {
+		width: 9%;
+		margin-left: 33%;
+	}
+}

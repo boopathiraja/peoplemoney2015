@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* ==|== Begin styling ========================================================= */
+.help_modal {
+    position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+    height: initial;
+    overflow: hidden;
+    z-index: 2;
+}
+.help_content {
+	overflow: hidden;
+}
+.help_left_nav {
+	float: left;
+}
+.help_left_nav.leftnav_alternatetmpl ul li.active::after {
+    margin-top: -40px;
+}
+.helpLeft_wrap {
+    background: url('../../images/common/left_dark_bg.png') right repeat-y #303030;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+
+.helpLeft_wrap .helpLeft_wrap_scroller {
+	width: 100%;
+}
+.help_right_nav .help_scroll_wrap {
+	background: url(../images/unspritable/background.png) repeat;
+	position: absolute;
+	right: 0;
+	width: 50%;
+	height: 100%;
+}
+.help_right_nav .help_scroll_wrap li {
+    padding: 20px 10px 0 0;
+    margin-left: 20px;
+    width: 85%;
+}
+.help_left_nav #help_modal_inner_left {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.help_left_nav #help_modal_inner_right {
+	float: right;
+	width: 50%;
+	height: 100%;
+	background: #F0F0F0;
+}
+.help_right_nav #help_article_content {
+	position: absolute;
+	background: #fff;
+	top: 5px;
+	right: 5px;
+	bottom: 47px;
+	left: 5px;
+	padding: 15px 10px 0 25px;
+	overflow-y: scroll;
+}
+#help_modal_inner_right li {
+    padding: 20px 10px 0 0;
+    margin-left: 20px;
+    width: 85%;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+}
+.help_scroll_wrap li div {
+    padding: 15px;
+    line-height: 15px;
+    color: #FAFAFA;
+    font-size: 14px;
+}
+
+.help_left_nav .sidebarleft ul {
+	cursor: pointer;
+}
+.help_left_nav .sidebarleft ul li.active::after {
+    margin-top: -31px;
+}
+.help_left_nav ul li.active > div {
+    color: #000000;
+    font-weight: bold;
+}
+#help_modal_inner_right ul {
+    color: #000;
+    list-style-type: disc;
+    font-size: 14px;
+    padding-right: 5px;
+}
+#help_modal_inner_right ul li.active > a {
+	color: #002B91;
+}
+.help_right_nav ul li a:active {
+    color: #fff;
+    background-color: #939191;
+}
+.help_right_nav #help_article_content .article_title {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+	padding-bottom: 15px;
+}
+.help_right_nav p {
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    padding-bottom: 15px;
+    line-height: 19px;
+}
+.help_right_nav .boldHeader {
+    font-weight: bold;
+    cursor: text;
+    color: #002B91;
+}
+
+.right_newDesign li div, .right_quotes li div, .right_alerts li div, .right_cnbc li div, .right_pro li div {
+    padding: 15px 15px 15px 0;
+}
+.aboutthisapptitle {
+    color: #000000;
+    padding-bottom: 4%;
+    font-weight: bold;
+	font-size: 16px;
+}
+
+.aboutthisappsubheader {
+    list-style: lower-alpha;
+    padding-bottom: 4%;
+}
+.aboutthisappsubheader li {
+    color: #000000;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 19px;
+}
+.privacypolicy ul {
+    padding-bottom:4%;
+}
+.privacypolicy li {
+    color: #000000;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 19px;
+}
+.help_right_nav a.helplnk_privacypolicy {
+	color: #0B5C96;
+	text-decoration: underline;
+	cursor: pointer;
+}
+/* Media queries */
+@media (min-width: 950px) and (orientation: landscape) {
+	.help_left_nav #help_modal_inner_left {
+		width: 60%;
+	}
+	.help_left_nav #help_modal_inner_right {
+		width: 40%;
+	}
+}

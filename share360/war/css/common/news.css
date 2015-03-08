@@ -1,0 +1,167 @@
+/* These are repeated in watchlist.css starting around line 554 and should be updated to these */
+
+/*============= News left-side list ==============*/
+
+#news #newspulldown {
+	height: 40px;
+	line-height: 20px;
+	padding: 5px 10px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #888;
+}
+.detail_news_left {
+	width:33%;
+	border-right:1px solid #ebebeb;
+	float:left;
+	overflow:hidden;
+	height:100%;
+	position:relative;
+}
+.button_container_news_more {
+	width:100%;
+	height:60px;
+	text-align:center;
+}
+.button_news_more {
+	margin-top:10px;
+	padding:10px 30px;
+}
+li.detail_news_story_item.active:nth-child(even) {
+	background-color:#323232;
+}
+li.detail_news_story_item.active:nth-child(odd) {
+	background-color:#323232;
+}
+li.detail_news_story_item:nth-child(even) {
+	background-color:#f0f0f0;
+}
+li.detail_news_story_item:nth-child(odd) {
+	background-color:#f8f8f8;
+}
+li.detail_news_story_item.active header {
+	color:white;
+	padding:15px 15px 7px 15px;
+	line-height:15px;
+}
+li.detail_news_story_item header {
+	padding:15px 15px 7px 15px;
+	line-height:15px;
+}
+li.detail_news_story_item footer {
+	color:gray;
+	line-height:15px;
+	padding-left:15px;
+}
+li.detail_news_story_item {
+	border-bottom:1px solid #fff;
+	border-top:1px solid #f8f8f8;
+	border-right:1px solid #d6d6d6;
+	font-size:10pt;
+	list-style-type:none;
+	padding-bottom:15px;
+	cursor: pointer;
+}
+/*=============== Left Column on Right Side (for accounts)======= */
+.detail_news_left_single {
+	width:100%;
+	border-left:1px solid #ebebeb;
+}
+.adbo_right_contain {
+    position:relative;
+    z-index:1;
+    width:100%;
+    height:700px;
+    overflow:hidden;
+}
+/*=============News item right side ===============*/
+.detail_news_right {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	width: 66%;
+	margin-left: 33%;
+	border-left: 1px solid #ebebeb;
+}
+.detail_news_font_change {
+	width:94%;
+	border-bottom:1px solid #ccc;
+	height:40px;
+	margin:auto;
+	margin-bottom:10px;
+}
+.detail_news_decrease {
+	float:right;
+	line-height:40px;
+	font-family:Times, serif;
+	width:40px;
+	text-align:center;
+	font-size:10pt;
+	color:#939191;
+	font-weight:bold;
+	cursor:pointer;	
+}
+.detail_news_increase {
+	float:right;
+	line-height:40px;
+	height:40px;
+	width:40px;
+	text-align:center;
+	font-family:Times, serif;
+	font-size:17pt;
+	color:#939191;
+	font-weight:bold;
+	cursor:pointer;
+}
+.detail_news_increase:active, .detail_news_decrease:active {
+	color:#fff;
+	background-color:#939191;
+	border-radius: 20px;
+}
+.detail_news_separator {
+	border-right: 1px solid #e5e5e5;
+	float:right;
+	margin-top:9px;
+	width:1px;
+	height:22px;
+}
+.detail_news_article_title {
+	font-weight:bold;
+	font-size:20px;
+	margin-bottom:5px;
+	line-height:25px;
+	padding-left:3%;
+	padding-right:3%;
+}
+.detail_news_article_date {
+	margin-bottom:5px;
+	color:#808080;
+	padding-left:3%;
+	padding-right:3%;
+	font-size:10pt;
+}
+.detail_news_article_author {
+	margin-bottom:20px;
+	color:#808080;
+	padding-left:3%;
+	padding-right:3%;
+	font-size:10pt;
+}
+.detail_news_article_article {
+	margin:3%;
+	font-size:11pt;
+}
+.detail_news_article_article p {
+	line-height: 18px;
+	margin-bottom: 15px;
+}
+.news_article_loading_padding {
+	padding: 30px;
+	padding-left:70px;
+	border:1px solid black; 
+	background-color:white;
+}
+.news_article_loading_spinner {
+	width:32px;
+	height:32px;
+}

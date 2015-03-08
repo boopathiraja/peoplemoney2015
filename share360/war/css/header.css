@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header-wrap {
+	position: fixed;
+	top: 0;
+	left: 120px;
+	width: 1024px;
+	height: 46px;
+	background-color: #191919;	
+	z-index: 1000;
+}
+#header-wrap > header {
+	margin: 0 auto;
+	position: relative;	
+}
+.smooth-transition #header-wrap > header {
+	-webkit-transition:width .25s linear;
+}
+#header-wrap > header nav #logo {
+	float:left;
+	background-image:url(../images/header/etrade_logo.png);
+	width:35px;
+	height:35px;
+	margin-top:6px;
+}
+#header-wrap > header nav {
+	float:left;
+	line-height:45px;	
+	padding:0 15px;
+}
+#header-wrap > header nav a {
+	margin:0 0 0 25px;
+	color:#acacac;
+	font-weight:bold;
+}
+#header-wrap > header nav a:first-child {
+	margin-left:0px;
+}
+#header-wrap > header nav#nav-secondary,
+#header-wrap > header nav#nav-tertiary {
+	float:right;
+}
+#header-wrap > header nav#nav-tertiary {
+	border-width:0 1px;
+	border-style:solid;
+	border-color:#464646;
+}
+#header-wrap > header nav input {
+	border-radius:10px;
+	width:100px;
+	background-color: #3a3a3a;
+	color: #a3a3a3;
+}
+#header-wrap .icon-settings {
+	float:right;
+	background-image:url(../images/header/icon-settings.png);
+	width:23px;
+	height:23px;
+	margin-top:11px;
+}
+#header-wrap .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+#header-wrap .ir br { display: none; }

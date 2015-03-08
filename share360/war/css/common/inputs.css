@@ -1,0 +1,61 @@
+ 
+/*==================INPUT BOXES =============*/
+input.whitebg {
+	height:25px;
+	border-radius:15px;
+	border:1px solid #bbb;
+	padding-left:5px;
+	font-size:9pt;
+	width:80px;
+}
+input.whitebg.searchsmall {
+	padding-left:30px;
+	background-position: -707px -190px;
+	background-image: url(../../images/main-sprite.png);
+	background-repeat: no-repeat;
+	width:60px;
+}	
+input.whitebg.search {
+	padding-left:30px;
+	background-position: -707px -190px;
+	background-image: url(../../images/main-sprite.png);
+	background-repeat: no-repeat;
+	width:262px;
+}
+input[type=text],input[type=number],input[type=password],textarea{
+	-webkit-user-modify: read-write-plaintext-only;
+}
+
+input.plaintext{
+	-webkit-user-modify: read-write-plaintext-only;
+}
+
+
+/*================= Checkboxes ============*/
+.checkbox {
+	width:45px;
+	height:40px;
+	margin-left:12px;
+	float:left;
+}
+.checkbox.off {
+	background-position: -380px -125px;
+	background-image: url(../../images/main-sprite.png);
+	background-repeat: no-repeat;
+}
+.checkbox.on {
+	background-position: -422px -125px;
+	background-image: url(../../images/main-sprite.png);
+	background-repeat: no-repeat;
+}
+
+
+/* Media Styles */
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.checkbox.on, .checkbox.off,input.whitebg.search ,input.whitebg.searchsmall {
+		background-image: url(../../images_2x/main-sprite.png);
+		background-size:800px 400px;
+	}
+}	

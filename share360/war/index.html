@@ -1,10 +1,256 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>share360</title>
-</head>
-<body>
-<h3>welcome !</h3>
-</body>
+<html lang="en" ng-app="cellOneApp">
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>Capital One</title>
+		<meta name="description" content="HTML 5">
+
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="libs/jquery/jquery-1.8.1.min.js"></script>
+		<!-- Angular -->
+		<script type="text/javascript" src="libs/angular/angular.min.js"></script>
+		<!--
+		<script type="text/javascript" src="libs/angular/angular-resource.min.js"></script>
+				<script type="text/javascript" src="libs/angular/angular-route.min.js"></script>
+				<script type="text/javascript" src="libs/angular/angular-sanitize.min.js"></script>
+				<script type="text/javascript" src="libs/angular/ng-iscroll.min.js"></script>-->
+		
+
+		<script type="text/javascript" src="js/main_controller.js"></script>
+		<!--
+		<script type="text/javascript" src="src/angular/global/main_service.js"></script>
+				<script type="text/javascript" src="src/angular/global/page_stack_service.js"></script>
+				<script type="text/javascript" src="src/angular/subheader/subheader_service.js"></script>
+				<script type="text/javascript" src="src/angular/subheader/subheader_controller.js"></script>-->
+		
+
+		<!-- jQuery plugins-->
+		<script type="text/javascript" src="libs/jquery/plugins/jquery.cookie.js"></script>
+		<script type="text/javascript" src="libs/jquery/plugins/jquery.jcarousel.js"></script>
+		<script type="text/javascript" src="libs/jquery/plugins/jquery.touchwipe.js"></script>
+		<script type="text/javascript" src="libs/jquery/plugins/jquery-ui-1.8.23.min.js"></script>
+		<script type="text/javascript" src="libs/jquery/plugins/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="libs/jquery/plugins/jquery.tablesorter.js"></script>
+
+		<!-- BackBone -->
+		<script src="libs/backbone/underscore-min.js"></script>
+		<script src="libs/backbone/backbone-min.js"></script>
+
+
+	</head>
+	<body id="cellone-app-main" ng-controller="CellOneAppMainCtrl">
+			<div id="container">
+				<div id="header-wrap" class="header-wrap">
+					<div class="captital_one_logo"></div>
+					<div class="login_info" ng-show="!isLoginPage">
+						<span>Welcome {{userName}}</span>
+						<div class="sign_out" ng-click="logoff()">Sign Out</div>
+					</div>
+				</div>
+				<div id="pages-wrap" class="pages-wrap">
+					<!--<div class="capital_loader"></div>-->
+					<div id="dlogin" class="dlogin_modal" ng-show="isLoginPage">
+						<div id="dash_login_modal" style="display: block;">
+
+							<div class="login_form">
+								<div class="signin_modal_title">
+									<span id="signin_form_img"></span>
+									<span>Account Sign In</span>
+								</div>
+
+								<form class="signin_form">
+									<input id="modal_login_user" ng-model="userName" type="text" autocomplete="off" placeholder="Username" class="plaintext">
+									<br>
+									<input id="modal_login_password" ng-model="password" type="password" autocomplete="off" placeholder="Password" class="plaintext">
+									<br>
+									<button type="button" id="modal_login_submit" ng-click="login()" class="action_button button_purple sign_in">
+										Sign In
+									</button>
+									
+								</form>
+								<div id="loginmodal_forgotpwd">
+									<span id="signIn_forgot_password" class="forgot_password">Forgot <a href="" target="_blank">Username</a> or <a href="" target="_blank">Forgot Password?</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="transaction_page" class="transaction_page" ng-show="!isLoginPage">
+						<div class="trans_history_header">
+							Transaction History
+						</div>
+						
+						<div id="pending_trans_section" ng-show="pendingTransactions.transactions.length">
+							<div class="trans_header">
+								Pending Transactions
+							</div>
+							<div class="trans_table">
+								<div class="trans_table" id="pending_trans_table">
+								<table>
+									<tr class="table_header">
+										<td width="10%">
+											Date
+										</td>
+										<td width="30%">
+											Description
+										</td>
+										<td width="20%">
+											Category
+										</td>
+										<td width="20%">
+											Amount
+										</td>
+										<td width="20%">
+											Action
+										</td>
+									</tr>
+									<tr ng-repeat="trans in pendingTransactions.transactions">
+										<td>
+											{{trans['transaction-time'] | date:'MM-dd-yyyy'}}
+										</td>
+										<td>
+											{{trans.merchant}}
+										</td>
+										<td>
+											<span ng-if="trans.categorization">
+												{{trans.categorization}}
+											</span>
+											<span ng-if="!trans.categorization && trans['acceptanceStatus'] !=  'accepted'">
+												Processing
+											</span>
+											
+											<span ng-if="trans['acceptanceStatus'] ==  'accepted'">
+												Processed
+											</span>
+											
+										</td>
+										<td>
+											${{trans.amount}}
+										</td>
+										<td>
+											<div ng-if="trans['isManualSplit'] && trans['acceptanceStatus'] ==  'pending'">
+												<button type="button" id="accept_{{trans['transaction-id']}}" data-tid = "{{trans['transaction-id']}}" data-merchant = "{{trans.merchant}}" data-amount= "{{trans.amount}}" ng-click="onAccept($event)" class="action_button button_purple split_btn">
+													Accept
+												</button>
+												
+												<button type="button" id="deny_{{trans['transaction-id']}}" data-tid = "{{trans['transaction-id']}}" data-merchant = "{{trans.merchant}}" data-amount= "{{trans.amount}}" ng-click="onDeny($event)" class="action_button button_purple split_btn button_red">
+													Deny
+												</button>
+											</div>
+											<div ng-if="trans['acceptanceStatus'] ==  'accepted'">
+												<span class="accepted">Accepted</span>
+											</div>
+											
+											<div ng-if="!trans['isManualSplit'] &&  trans['acceptanceStatus'] ==  'pending'">
+												<span class="pending_acceptance">Pending Acceptance</span>
+											</div>
+											
+										</td>
+									</tr>
+								</table>
+							</div>
+							</div>
+						</div>
+						
+						<div id="recent_trans_section" ng-show="recentTransactions.transactions.length">
+							<div class="trans_header">
+								Recent Transactions
+							</div>
+							<div class="trans_table" id="recent_trans_table">
+								<table>
+									<tr class="table_header">
+										<td width="10%">
+											Date
+										</td>
+										<td width="30%">
+											Description
+										</td>
+										<td width="20%">
+											Category
+										</td>
+										<td width="20%">
+											Amount
+										</td>
+										<td width="20%">
+											Action / Status
+										</td>
+									</tr>
+									<tr ng-repeat="trans in recentTransactions.transactions">
+										<td>
+											{{trans['transaction-time'] | date:'MM-dd-yyyy'}}
+										</td>
+										<td>
+											{{trans.merchant}}
+										</td>
+										<td>
+											<span ng-if="trans.categorization">
+												{{trans.categorization}}
+											</span>
+											<span ng-if="!trans.categorization">
+												Processing
+											</span>
+											
+										</td>
+										<td>
+											${{trans.amount * -1}}
+										</td>
+										<td>
+											<span ng-if="trans.amount < 0">
+												<button type="button" id="split_{{trans['transaction-id']}}" data-tid = "{{trans['transaction-id']}}" data-merchant = "{{trans.merchant}}" data-amount= "{{trans.amount}}" ng-click="openSplitDialog($event)" class="action_button button_purple split_btn">
+													Split
+												</button>
+											</span>
+											
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+			<modal-dialog show='modalShown' width='550px' height='400px'>
+			 <div class="select_ben_header" >Select Beneficiary</div>
+			 <div class="ben_section">
+			 	<div class="userInputSection">
+					<select id="selectedBeneficiary" ng-model="selectedBeneficiary" ng-options="ben.name for ben in beneficiaries track by ben.id">
+						<option value="">-- Select Beneficiary --</option>
+					</select>
+					
+					<input id="amount" ng-model="amount" type="text" autocomplete="off" placeholder="Enter amount" class="plaintext amount">
+					
+					<a href ng-click="splitEqual()" class="split_equal_link">Split equal</a>
+				</div>
+				
+				<div class="add_more">+Add More</div>
+
+				<div class="action_buttons">
+					<button type="button" ng-click="split()" class="action_button button_purple split_btn">
+						Split
+					</button>
+				
+				<button type="button" ng-click="addNewBeneficiary()" class="action_button button_purple split_btn">
+					New Beneficiary
+				</button>
+				</div>
+			
+			 </div>
+			</modal-dialog>
+			
+			<div id="dialog" style="display: none;" title="Split Confirmation">
+			  <p id="dynamic_msg_content"></p>
+			  <div class="close_btn_div">
+				<button class="close" onclick="closeDialog()" >
+					OK
+				</button>
+			</div>
+			</div>
+	</body>
 </html>

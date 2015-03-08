@@ -1,0 +1,119 @@
+/*style to display header (eg. modulename)*/
+.sidebarleft_header {
+    border-top: 1px solid #2F2F2F;
+    border-bottom: 1px solid #191919;
+    background: url('../../images/common/left_menu_label.png') repeat-x #1D1D1D;
+    float: left;
+    font-size: 24px;
+    font-family: ETFAvenirHeavy;
+}
+
+/*display light lined background with header*/
+.sidebarleft_subheader {
+    border-bottom: 1px solid #545454;
+    background: url('../../images/common/left_menu_label.png') repeat-x;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*display light gray color bg*/
+.sidebarleft_lightbg {
+    border-bottom: 1px solid #4E4E4E;
+    background: url('../../images/common/left_light_bg.png') right repeat-y #3A3A3A;
+}
+
+/*display dark gray color bg*/
+.sidebarleft_darkbg {
+    border-bottom: 1px solid #4E4E4E;
+    background: url('../../images/common/left_dark_bg.png') right repeat-y #303030;
+}
+
+/*alternative template for dark/light sequence*/
+.sidebarleft ul li:nth-child(odd) {
+    border-bottom: 1px solid #4E4E4E;
+    background: url('../../images/common/left_dark_bg.png') right repeat-y #303030;
+}
+.sidebarleft ul li:nth-child(even) {
+    border-bottom: 1px solid #4E4E4E;
+    background: url('../../images/common/left_light_bg.png') right repeat-y #3A3A3A;
+}
+
+/*style Selection of an item*/
+
+.sidebarleft ul li.active {
+    border-bottom: 1px solid #4E4E4E;
+    cursor: pointer;
+    background: #FAFAFA;
+    box-shadow: inset -5px 0px 10px #ddd;
+    background-image: linear-gradient(bottom, rgb(254,254,254) 33%, rgb(248,248,247) 13%, rgb(241,240,240) 84%);
+    background-image: -o-linear-gradient(bottom, rgb(254,254,254) 33%, rgb(248,248,247) 13%, rgb(241,240,240) 84%);
+    background-image: -moz-linear-gradient(bottom, rgb(254,254,254) 33%, rgb(248,248,247) 13%, rgb(241,240,240) 84%);
+    background-image: -webkit-linear-gradient(bottom, rgb(254,254,254) 33%, rgb(248,248,247) 13%, rgb(241,240,240) 84%);
+    background-image: -ms-linear-gradient(bottom, rgb(254,254,254) 33%, rgb(248,248,247) 13%, rgb(241,240,240) 84%);
+    background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.33, rgb(254,254,254)),
+    color-stop(0.13, rgb(248,248,247)),
+    color-stop(0.84, rgb(241,240,240))
+    );
+}
+
+/*style for selection black arrow
+ * (NOTE: every page using this have to define their margin-top for arrow display)
+ * */
+.sidebarleft ul li.active:not(.noarrow)::after {
+    content: ' ';
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #333;
+}
+
+/*top + sign box when unfocused*/
+.sidebarleft_addunfocus {
+    background: url('../../images/common/add_icon.png') #363636 no-repeat;
+    box-shadow: inset 1px 1px 2px #161616;
+    background-position: 10px;
+}
+
+/*top + sign box when focused*/
+.sidebarleft_addfocus {
+    background: url('../../images/common/add_icon.png') #fff no-repeat;
+    background-position: 10px;
+    color: #242424;
+}
+
+/*style for the rounded box on left nav*/
+.sidebarleft_roundedbox {
+    border-radius: 30px;
+    border: none;
+    color: #242424;
+    font-weight: bold;
+    display: inline-block;
+    font-family: helvetica;
+}
+
+.sidebarleft_delete {
+    display: none;
+    float: left;
+    background: url('../../images/common/remove.png') no-repeat;
+    width: 22px;
+    height: 22px;  
+}
+
+
+/* Media Styles */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.sidebarleft_addfocus, .sidebarleft_addunfocus {
+		background-image: url('../../images_2x/main-sprite.png');
+		background-size:800px 400px;
+		background-repeat:no-repeat;
+		background-position: -771px -375px;
+	}
+}

@@ -1,0 +1,248 @@
+
+.settings_dropdown .scroller {
+	width: 100%;
+}
+.settings_dropdown ul {
+	width: 100%;
+	-moz-box-shadow: 0 2px 5px #666;
+	-webkit-box-shadow: 0 2px 5px #666;
+	box-shadow: 0 2px 5px #666;
+}
+.settings_dropdown ul li {
+	position: relative;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dddbdc), color-stop(1, #d6d4d5) );
+	background: -moz-linear-gradient( center top, #dddbdc 5%, #d6d4d5 100% );
+	border-bottom: 1px solid #d1cfd0;
+	padding: 24px 0 24px 15px;
+}
+.settings_dropdown ul.settings_item, .settings_dropdown ul.options_item {
+	margin-top: 5px;
+}
+.settings_dropdown ul.link_item {
+	cursor: pointer;
+}
+.settings_dropdown ul.link_item .arrow {
+	position: absolute;
+	background-image:url('../images/main-sprite.png');
+	background-position:0px -167px;
+	top: 30px;
+	right: 20px;
+	width: 28px;
+	height: 30px;
+}
+
+.settings_dropdown header {
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.settings_dropdown p {
+	font-size: 13px;
+	color: #808080;
+}
+.settings_dropdown .settings_time_dropdown {
+	position: absolute;
+	width: 130px;
+	top: 20px;
+	right: 20px;
+}
+.settings_dropdown ul.options_item li {
+	padding: 0;
+}
+.settings_dropdown ul.options_item a.classic_view {
+	display: block;
+	padding: 24px 0 24px 15px;
+}
+.settings_dropdown ul.options_item .arrow {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	background: url(../images/common/settings_arrow_right1.png) no-repeat;
+	width: 23px;
+	height: 23px;
+}
+
+/* ==|== Environment options ================================================ */
+.settings_dropdown .settings_env {
+	display: none;
+}
+.settings_dropdown .settings_env {
+	width: 280px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.settings_dropdown .version_number {
+	text-align: center;
+	margin-top: 10px;	
+	width: 50px;
+	height: 19px;
+	margin-left: 40%;
+}
+.settings_dropdown .button_gray {
+	padding: 5px;
+}
+.settingsenv {
+	width: 100%;
+	height: 40px;
+}
+#settings_switchEnv .active {
+	background:blue;
+}
+
+/*==============RADIO BUTTON STYLES=================*/
+.settings_radio_option {
+	float: left;
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+}
+.settings_radio_unchecked {
+	background-image: url("../images/radiounchecked_big.png");
+	background-repeat: no-repeat;
+	background-size: 25px 25px;
+	background-position-y: 0.5px;
+}
+.settings_option_radio_active {
+	background-image: url('../images/radio_on.png');
+	background-repeat: no-repeat;
+}
+.settings_option_radio_inactive {
+	background-image: url('../images/radio_off.png');
+	background-repeat: no-repeat;
+}
+
+
+.settings_radiolbl {
+	padding-bottom: 5px;
+}
+.settings_option_div {
+	margin-top: -38px;
+	float: right;
+	margin-right: 15px;
+	text-align: left;
+	text-indent: 4px;
+}
+
+.settings_viewfullsite{
+	display: block;
+	padding: 24px 0 24px 15px;	
+}
+
+.settingsapp_download{
+	display: block;
+	padding: 24px 0 24px 15px;
+}
+.settingsapp_download .settingstwoline{
+	padding-top:5px
+}
+.settings_buildno{
+	display:none;
+	margin-left: 53%;
+	margin-top: -6.3%;
+	width: 119px;
+	height: 19px;
+	text-align: left;
+}
+
+.settings_notifications{
+	display: block;
+	padding: 24px 0 24px 15px;
+}
+.settings_notificationOptions{
+	padding-top:30px;
+	display: none;
+}
+.settings_alerts{
+	padding-top:21px;
+	padding-bottom:21px;
+}
+.settings_alerts p{
+	width: 64%;
+	text-align: right;
+}
+.settings_alertulstyle {
+    list-style-type: decimal;
+    color: #000;    
+    font-size: 14px;
+    margin-left: 20px;
+}
+.settings_alertpstyle{
+	padding-top:20px;
+	padding-bottom: 15px;
+}
+.settings_alertulstyle li {
+	padding-top: 15px;
+	line-height: normal;
+}
+
+#settings_SmartTermsCondition label {
+	font-weight: bold;
+}
+.settings_NotificationAlert a{
+	color:#12c;
+	text-decoration: underline;	
+}
+.settings_NotificationAlert a:visited{
+	color:#12c;
+	text-decoration: underline;	
+}
+.settings_notificationArrow{	
+	position: absolute;
+	background-image: url('../images/main-sprite.png');
+	background-position: -93px -216px;
+	top: 24px;
+	right: 13px;
+	width: 33px;
+	height: 33px;	
+}
+.settings_notificationArrowDown{	
+	position: absolute;
+	background-image: url('../images/main-sprite.png');
+	background-position: -59px -216px;
+	top: 22px;
+	right: 20px;
+	width: 28px;
+	height: 30px;	
+}
+
+/* Media Styles */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.settings_notificationArrow {
+		background-image: url('../images_2x/main-sprite.png');
+		background-size:800px 400px;
+	}
+	.settings_notificationArrowDown {
+		background-image: url('../images_2x/main-sprite.png');
+		background-size:800px 400px;
+	}
+	.settings_dropdown ul.link_item .arrow {
+		background-image: url('../images_2x/main-sprite.png');
+		background-size:800px 400px;
+	}
+	.settings_dropdown ul.options_item .arrow {
+		height:30px;
+		width:30px;
+		background-position:-471px -256px;
+		background-image: url('../images_2x/main-sprite.png');
+		background-size:800px 400px;
+	}
+	.settings_radio_unchecked {
+		background-position:-58px 0px;
+		background-image: url('../images_2x/common/radio_buttons.png');
+		background-repeat: no-repeat;
+		background-size:83px 23px;
+	}
+	.settings_option_radio_active {
+		background-position:4px 0px;
+		background-image: url('../images_2x/common/radio_buttons.png');
+		background-repeat: no-repeat;
+		background-size:83px 23px;
+	}
+	.settings_option_radio_inactive {
+		background-position:-27px 0px;
+		background-image: url('../images_2x/common/radio_buttons.png');
+		background-repeat: no-repeat;
+		background-size:83px 23px;
+	}
+}

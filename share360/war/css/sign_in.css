@@ -1,0 +1,160 @@
+#signIn_forgot_password a {
+	color: #246FC8;
+}
+#dash_login_modal { 
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0; 
+	margin: 0; 
+	font-size: 13px;
+	font-family: sans-serif; 
+	background-color:#f6f6f6;
+	display: none;
+	z-index: 1000;
+}
+
+#dash_login_modal .login_form {
+	width: 50%;
+	height: 100%;
+	border-top: 1px solid #fff;
+	background-color: #fafafa;
+	margin: 0 auto;
+}
+#dash_login_modal .login_options {
+	width: 50%;
+	height: 100%;
+	float: right;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	background-color: #fafafa;
+	/*box-shadow: 2px 3px 4px 0 #eee inset;*/
+	-webkit-box-shadow: inset 7px -5px 20px 0px rgba(0,0,0,0.3);
+	box-shadow: inset 7px -5px 20px 0px rgba(0,0,0,0.3);
+	color: #868686;
+}
+#dash_login_modal strong {
+	color: black;
+}
+#dash_login_modal .login_settings strong {
+	color: black;
+	font-size: 14px;
+}
+#dash_login_modal form.signin_form {
+    position: relative;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#dash_login_modal #loginmodal_forgotpwd {
+	text-align: center;
+	font-size: 11px;
+	padding-top: 15px;
+}
+
+#dash_login_modal #loginmodal_forgotpwd a:link {
+	color: #246FC8;
+}
+
+#dash_login_modal .signin_modal_title {
+	width: 50%;
+	color: #000;
+	font-family: Helvetica;
+	font-size: 20px;
+	border-bottom: 1px solid #868686;
+	margin: 50px auto 10px;
+	line-height: 46px;
+	
+}
+
+#dash_login_modal .login_options #signin_ops_img {
+	background-image: url(../images_2x/header/icon-settings.png);
+	background-repeat: no-repeat;
+	background-size: 25px 23px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	vertical-align: text-bottom;
+}
+
+#dash_login_modal .login_form #signin_form_img {
+	background-image: url(../images_2x/main-sprite.png);
+	background-repeat: no-repeat;
+	background-size: 800px 400px;
+	background-position: -557px -7px; 
+	display: inline-block;
+	width: 24px;
+	height: 25px;
+	vertical-align: text-bottom;
+}
+
+#dash_login_modal form.signin_form input, .ben_section input {
+	margin-top: 10px;
+	width: 180px;
+}
+#dash_login_modal form.signin_form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(83, 68, 219, 1);
+}
+#dash_login_modal form.signin_form input[type=image] {
+	position: absolute;
+	top: 62px;
+	left: 325px;
+}
+#dash_login_modal .options {
+	width: 70%;
+	overflow: hidden;
+	margin: 25px 65px;
+}
+#dash_login_modal .options .settings_description {
+	height: 60px;
+	line-height: 14px;
+}
+
+#dash_login_modal .options .login_settings {
+	display: table;
+}
+#dash_login_modal .options .login_settings > table {
+	display: inline-table;
+	border-collapse: separate;
+	border-spacing: 0 8px;
+	margin-bottom: 10px;
+	margin-right: 70px;
+}
+#dash_login_modal > .options {
+	overflow: hidden;
+	margin: 15px 0;
+	padding: 0 10px;
+}
+#dash_login_modal .login_error_msg {
+	display: block;
+	color: #b10000;
+	font-size: 11px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-left: 40px;
+	height: 17px;
+	background: url(../images/sign_in/alert_icon.png) no-repeat 12px 5px;
+	margin: 5px 30px 5px 50px;
+}
+#dash_login_modal .login_wait_spinner {
+	display: none;
+	position: absolute;
+	top: 98px;
+	left: 160px;
+	background: url(../images/global/spinner_small_transparent.gif) no-repeat;
+	width: 32px;
+	height: 32px;	
+}
+/* Media queries */
+@media (min-width: 950px) and (orientation: landscape) {
+	#dash_login_modal .login_form {
+		width: 50%;
+	}
+	#dash_login_modal .login_options {
+		width: 65%;
+	}
+}
