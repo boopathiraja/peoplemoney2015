@@ -2,38 +2,14 @@
 @import url(reset.css);
 @import url(common/buttons.css);
 @import url(common/loading.css);
-@import url(common/charting.css);
 @import url(common/drop_downs.css);
-@import url(common/overlay.css);
 @import url(common/style.css);
 @import url(nav.css);
-@import url(common/sidebar.css);
 @import url(common/inputs.css);
 @import url(common/tables.css);
-@import url(common/news.css);
 @import url(common/jquery-ui-capitalone.css);
-@import url(settings.css);
-@import url(quotes_lookup.css);
-@import url(watchlistflyout.css);
 @import url(modal_dialog.css);
 
 /* Styles Load on Demand */
-@import url(dashboard/dashboard.css);
 @import url(sign_in.css);
-@import url(quick_transfer.css);
-@import url(quotes.css);
-@import url(options.css);
-@import url(securemessage.css);
-@import url(watchlist/watchlist.css);
-@import url(compare/compare.css);
-@import url(accounts/accounts.css);
-@import url(trading.css);
-@import url(news/news.css);
-@import url(help.css);
-@import url(alerts/alerts.css);
-@import url(whatsnew.css);
-@import url(common/redirectedConsole.css);
-@import url(subheader.css);
-@import url(portfolio/portfolio_table.css);
-@import url(portfolio/portfolio.css);
 

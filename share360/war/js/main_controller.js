@@ -40,7 +40,8 @@ cellOneApp.controller('CellOneAppMainCtrl', ['$scope', '$http', function($scope,
 	
 $scope.reset = function() {
 	$scope.isLoginPage = true;
-	$scope.userName = "user1";
+	$scope.showLoader = false;
+	$scope.userName = "";
 	$scope.password = "";
 	$scope.uid = "1110568334";
 	$scope.token = "7642B860792EFD01D5A467D8B63559A0";
@@ -48,7 +49,6 @@ $scope.reset = function() {
 	$scope.recentTransactions = [];
 	$scope.splittedTransactionArray = [];
 };
-
 
 $scope.reset();
 $scope.userLoginMap = {
@@ -106,6 +106,7 @@ $scope.userData = localStorage.userData ? localStorage.userData : defaultUserDat
 localStorage.setItem('userData', JSON.stringify($scope.userData));
 
 $scope.login = function() {
+	$scope.showLoader = true;
 	$scope.isLoginPage = false;
 	$scope.uid = $scope.userLoginMap[$scope.userName]["UID"];
 	$scope.token = $scope.userLoginMap[$scope.userName]["token"];
@@ -117,6 +118,16 @@ $scope.logoff = function() {
 };
 
 $scope.modalShown = false;
+$scope.newBenModalShown = false;
+
+$scope.addNewBeneficiary = function() {
+	$scope.newBenModalShown = true;
+};
+
+$scope.newBenSubmit = function() {
+	$scope.newBenModalShown = false;
+};
+
 $scope.openSplitDialog = function($event, merchant, amount) {
 	var target = $event.target;
 	
@@ -181,12 +192,11 @@ $scope.split = function() {
 	$scope.disableSplitBtn("split_" + $scope.selectedTransId);
 	$("#dynamic_msg_content").text("The transaction split request was submitted succesfully.");
 	$("#dialog" ).dialog();
-	$scope.callNexmo();
+	$scope.callNexmo("Share+credit+acceptance+request+:+Please+login+to+your+capital+one+account+to+accept.", '14804271035');
 };
 
-$scope.callNexmo = function() {
-	var userMsg = "Share+credit+acceptance+request+:+Please+login+to+your+capital+one+account+to+accept.";
-	var url = "https://rest.nexmo.com/sms/json?api_key=f00942b1&api_secret=0b6dc8d3&from=12529178631&to=14804271035&text=" + userMsg;
+$scope.callNexmo = function(userMsg, mobNum) {
+	var url = "https://rest.nexmo.com/sms/json?api_key=f00942b1&api_secret=0b6dc8d3&from=12529178631&to=" + mobNum+ "&text=" + userMsg;
 	$.ajax({
 
 		type : "GET",
@@ -236,6 +246,7 @@ $scope.onAccept = function($event) {
 			}
 		}
 		localStorage.setItem('userData', JSON.stringify(localStorageBen));
+		$scope.callNexmo("Share+credit+:+Congratulations+you+share+credit+has+been+accepted.", "14153165690");
 	}
 };
 
@@ -297,6 +308,7 @@ $http({
 			'Content-Type' : 'application/json'
 		}
 	}).success(function(data, status) {
+		$scope.showLoader = false;
 		var localStorageBen = JSON.parse(localStorage.userData);
 		var localTransaction = localStorageBen[$scope.uid]["transaction"];
 		var apiTransaction = data["transactions"];
@@ -304,6 +316,7 @@ $http({
 		data["transactions"] = concatTransaction;
 		$scope.pendingTransactions = data;
 	}).error(function(data, status) {
+		$scope.showLoader = false;
 		$scope.data = data || "Request failed";
 		$scope.status = status;
 	});
@@ -324,8 +337,10 @@ $http({
 			'Content-Type' : 'application/json'
 		}
 	}).success(function(data, status) {
+		$scope.showLoader = false;
 		$scope.recentTransactions = data;
 	}).error(function(data, status) {
+		$scope.showLoader = false;
 		$scope.data = data || "Request failed";
 		$scope.status = status;
 	});

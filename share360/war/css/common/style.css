@@ -25,6 +25,21 @@
 	width: 90px;
 	font-weight: bold;
 }
+.add_ben_section {
+	padding: 20px 20px 20px 40px;
+}
+.action_buttons_new {
+	padding-left: 150px;
+	padding-top: 30px;
+}
+
+.facebook_img {
+	padding-top: 20px;
+	padding-left: 95px;
+}
+.userInputSection table td {
+	font-weight: bold;
+}
 .ben_section {
 	padding: 20px;
 }
@@ -58,6 +73,20 @@
 	background-size: 100%;
 	margin-left: 10%;
 	float: left;
+}
+.captial_loading {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	padding: 100px;
+}
+.credit_share_logo {
+	background: url("../../imgs/creditshare-white.png") no-repeat;
+	height: 100px;
+	width: 250px;
+	float: left;
+	margin-top: 14px;
+	background-size: 100%;
 }
 .login_info {
 	float: right;
@@ -735,7 +764,6 @@ a:visited {
 .common_tabWrapper {
   position: relative;
 	background-position: 0px -80px;
-	background-image: url(../../images/repeat-x-sprite.png);
 	background-repeat: repeat-x;
 	border-left: 1px solid white;
 	border-right: 1px solid white;
